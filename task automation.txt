@@ -1,0 +1,42 @@
+
+TASK AUTOMATION USING PYTHON SCRIPTSimport re
+
+# Open the input file
+file = open("input.txt", "r")
+data = file.read()
+file.close()
+
+# Find all email addresses
+emails = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", data)
+
+# Save emails to another file
+output = open("emails.txt", "w")
+
+for email in emails:
+    output.write(email + "\n")
+
+output.close()
+
+print("Emails extracted successfully!")
+
+
+
+import re
+
+# Open the input file
+file = open("input.txt", "r")
+data = file.read()
+file.close()
+
+# Find all email addresses
+emails = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", data)
+
+# Save emails to another file
+output = open("emails.txt", "w")
+
+for email in emails:
+    output.write(email + "\n")
+
+output.close()
+
+print("Emails extracted successfully!")
